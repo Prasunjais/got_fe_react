@@ -1,0 +1,127 @@
+
+@media (max-width:480px){
+    .col-width {
+        width: 80px;
+        padding-right: 5px;
+    }
+}
+@media (max-width:575px){
+    .progress-wrapper p{
+        height: 40px;
+    }
+    .stepper-wrapper .stepper-content{
+        line-height: 19px;
+    }
+    [type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+        padding-left: 19px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .col-width-employment {
+        width: 80px;
+        padding-right: 0px;
+    }
+    .success-error-box{
+        padding: 0px !important;
+    }
+    .border-box-circle {
+        padding: 20px 25px;
+    }
+}
+@media (max-width:767px){
+    .empty-colum{
+        display: none !important;
+    }
+    
+   .content-wrapper{
+       background:#fff;
+   }
+   .line-hr{
+       display:block;
+   }
+   .footer-content{
+        align-items: start !important;
+        padding: 0px 15px;
+   }
+   footer ul li {
+       margin: 0px;
+   }
+   footer ul li a {
+       font-size: 11px;
+   }
+   footer{
+        box-shadow: 1px 0px 3px 1px #efefef;
+        margin-top: 20px;
+   }
+   .container.sm{
+        max-width:100%;
+   }
+   .stepper-wrapper .stepper-content{
+        line-height: 19px;
+    }
+
+    .congrats-box{
+        margin: 0px !important;
+    }
+    /* .loan-error-wrapper .right-section ul{
+        text-align:center;
+    } */
+    .success-error-box{
+        padding: 0px 20px;
+    }
+    .border-box-circle{
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 991px) {
+    .container.md{
+        max-width:95%;
+   }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .line-hr {
+        border-top: 1px solid rgba(0, 0, 0, 0.19);
+        margin-right: -23px;
+        margin-left: -23px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .empty-colum{
+        display: none !important;
+    }
+    footer ul li a {
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .order-tab-1{
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    .order-tab-2{
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    .order-tab-3{
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    .loan-error-wrapper .right-section .skew:after{
+        position: static !important;
+    }
+    .border-box-circle{
+        padding: 10px 15px;
+    }
+    .congrats-form .border-box{
+        min-height: 80px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .congrats-form .border-box{
+        min-height: 80px;
+      }
+}
+@media (min-width:1199px){
+    
+}
