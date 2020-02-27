@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux'
 
-import application from './application'
-import user from './user'
+import battle from './battle'
 
 export default combineReducers({
-    application, user
+    battle
 });

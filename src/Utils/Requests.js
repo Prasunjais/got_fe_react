@@ -1,13 +1,13 @@
-import {logout} from './Auth'
+import { logout } from './Auth'
 
-export const handleErrorResponse = (err, errorMessage="Unable to process the request") =>{
-    if( typeof err.response === "undefined" ){
-        return {errorMessage, errors : [], responseCode : 500}
+export const handleErrorResponse = (err, errorMessage = "Unable to process the request") => {
+    if (typeof err.response === "undefined") {
+        return { errorMessage, errors: [], responseCode: 500 }
         return false;
     }
 
     //Check if it is JWT authentication error
-    if( typeof err.response !== "undefined" && err.response.status === 401 ){
+    if (typeof err.response !== "undefined" && err.response.status === 401) {
         window.onbeforeunload = function () {
             return void (0)
         };
@@ -18,20 +18,20 @@ export const handleErrorResponse = (err, errorMessage="Unable to process the req
 
     let errors = {};
 
-    if( typeof err.response !== "undefined" ){
+    if (typeof err.response !== "undefined") {
 
         //Check if this reponse has for error messages
-        if( err.response.data.errors ){
+        if (err.response.data.errors) {
             errors = { ...err.response.data.errors };
         }
 
         //If error message was available
-        if( typeof err.response.data.message !== "undefined" ){
+        if (typeof err.response.data.message !== "undefined") {
             errorMessage = err.response.data.message;
         }
 
-        return { errorMessage, errors, responseCode : err.response.status }
+        return { errorMessage, errors, responseCode: err.response.status }
     }
 
-    return { errorMessage, errors : [], responseCode : 400 }
+    return { errorMessage, errors: [], responseCode: 400 }
 }

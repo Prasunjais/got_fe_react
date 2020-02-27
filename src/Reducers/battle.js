@@ -1,29 +1,31 @@
-import { actionTypes } from 'Actions/test'
+import { actionTypes } from '../Actions/battle'
 const {
   SCROLL_TO_TOP, LOCATION_LIST, BATTLE_DETAILS
 } = actionTypes;
 
 const initialState = {
-  "_id": "",
-  "name": "",
-  "summer": true,
-  "year": 0,
-  "location": "",
-  "region": "",
-  "note": "",
-  "battleNumber": 0,
-  "attackerKing": "",
-  "defenderKing": "",
-  "attackerOutcome": "",
-  "battleType": "",
-  "majorDeath": 0,
-  "majorCapture": 0,
-  "attackerSize": 0,
-  "defenderSize": 0,
-  "attackerCommander": "",
-  "defenderCommander": "",
-  "attackers": [],
-  "defenders": []
+  "locationList": [{
+    "_id": "",
+    "name": "Battle Search",
+    "summer": true,
+    "year": 0,
+    "location": "",
+    "region": "",
+    "note": "",
+    "battleNumber": 0,
+    "attackerKing": "",
+    "defenderKing": "",
+    "attackerOutcome": "",
+    "battleType": "",
+    "majorDeath": 0,
+    "majorCapture": 0,
+    "attackerSize": 0,
+    "defenderSize": 0,
+    "attackerCommander": "",
+    "defenderCommander": "",
+    "attackers": [],
+    "defenders": []
+  }]
 }
 
 export default function test(state = initialState, action) {

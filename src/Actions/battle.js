@@ -11,7 +11,7 @@ export function scrollToTop(clear = false) {
 
 export function storeLocationList(data) {
   return dispatch => {
-    return dispatch({ type: actionTypes.LOCATION_LIST, data: { ...data } })
+    return dispatch({ type: actionTypes.LOCATION_LIST, data: data })
   }
 }
 

@@ -1,18 +1,25 @@
 import axios from 'axios';
 import { api as APIConfig } from '../AppConfig';
-//Utils
-import { getAuthToken } from '../Utils/Auth'
 
 //Get Application Information
-export const getApplicationDetails = async (applicationId) => {
+export const searchForBattles = async (king = false, location = false, type = false) => {
+  let query = '';
+  if (king)
+    query = query + `king=${king}`;
+  if (location)
+    query = query + `&location=${location}`;
+  if (type)
+    query = query + `&type=${type}`;
+
+  // hitting the api 
   let request = await axios.get(
-    APIConfig.base_url + '/app/v1/dashboard/application/' + applicationId,
-    {
-      headers: {
-        'Authorization': getAuthToken()
-      }
-    }
+    APIConfig.base_url + `/battle/search/?${query}&skip=0&limit=50` ,
   );
 
-  return request;
+  // if the search is success
+  if (request.status == 200)
+    return request.data.data;
+  else return {
+    results: []
+  }
 }
