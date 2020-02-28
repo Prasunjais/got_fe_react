@@ -47,7 +47,7 @@ function renderOption(item) {
 }
 
 
-const searchAPIDebounced = AwesomeDebouncePromise(searchResult, 50);
+const searchAPIDebounced = AwesomeDebouncePromise(searchResult, 30);
 
 class SearchBar extends Component {
   constructor(props) {
